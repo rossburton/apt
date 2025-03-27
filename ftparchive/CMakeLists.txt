@@ -1,9 +1,7 @@
 include_directories(${BERKELEY_INCLUDE_DIRS})
-# Definition of the C++ files used to build the program - note that this
-# is expanded at CMake time, so you have to rerun cmake if you add or remove
-# a file (you can just run cmake . in the build directory)
-file(GLOB_RECURSE source "*.cc")
-add_executable(apt-ftparchive ${source})
+
+set(sources apt-ftparchive.cc byhash.cc cachedb.cc cachedb.h contents.cc multicompress.cc override.cc sources.cc writer.cc apt-ftparchive.h byhash.h contents.h multicompress.h override.h sources.h writer.h)
+add_executable(apt-ftparchive ${sources})
 
 # Link the executables against the libraries
 target_include_directories(apt-ftparchive PRIVATE ${BERKELEY_INCLUDE_DIRS})
