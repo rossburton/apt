@@ -42,7 +42,6 @@
 
 #include "apt-ftparchive.h"
 #include "byhash.h"
-#include "cachedb.h"
 #include "multicompress.h"
 #include "writer.h"
 

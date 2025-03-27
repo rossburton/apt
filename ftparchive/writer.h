@@ -12,6 +12,8 @@
 #ifndef WRITER_H
 #define WRITER_H
 
+#include <config.h>
+
 #include <apt-pkg/hashes.h>
 
 #include <cstdio>
@@ -25,7 +27,11 @@
 #include <sys/types.h>
 
 #include "apt-ftparchive.h"
+#if HAVE_BDB
 #include "cachedb.h"
+#else
+#include "cachedb-stub.h"
+#endif
 #include "contents.h"
 #include "override.h"
 

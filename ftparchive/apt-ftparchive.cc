@@ -37,7 +37,6 @@
 #include <sys/time.h>
 
 #include "apt-ftparchive.h"
-#include "cachedb.h"
 #include "multicompress.h"
 #include "override.h"
 #include "writer.h"
